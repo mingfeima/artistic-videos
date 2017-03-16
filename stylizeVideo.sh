@@ -95,4 +95,4 @@ th artistic_video.lua \
 -number_format %04d
 
 # Create video from output images.
-$FFMPEG -i ${filename}/out-%04d.png ${filename}-stylized.$extension
+$FFMPEG -i ${filename}/out-%04d.png -pix_fmt yuv420p ${filename}-stylized.$extension
