@@ -1,4 +1,4 @@
-# artistic-videos
+# artistic-videos [CPU version]
 
 This is the torch implementation for the paper "[Artistic style transfer for videos](http://arxiv.org/abs/1604.08610)", based on neural-style code by Justin Johnson https://github.com/jcjohnson/neural-style .
 
