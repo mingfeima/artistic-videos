@@ -19,7 +19,7 @@ cmd:option('-content_pattern', 'example/marple8_%02d.ppm',
 cmd:option('-num_images', 0, 'Number of content images. Set 0 for autodetect.')
 cmd:option('-start_number', 1, 'Frame index to start with')
 cmd:option('-continue_with', 1, 'Continue with the given frame index.')
-cmd:option('-gpu', 0, 'Zero-indexed ID of the GPU to use; for CPU mode set -gpu = -1')
+cmd:option('-gpu', -1, 'Zero-indexed ID of the GPU to use; for CPU mode set -gpu = -1')
 cmd:option('-number_format', '%d', 'Number format of the output images.')
 
 --Flow options

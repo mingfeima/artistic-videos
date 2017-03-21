@@ -1,3 +1,4 @@
+require 'sys'
 require 'optim'
 
 -- modified to include a threshold for relative changes in the loss function as stopping criterion
@@ -112,8 +113,8 @@ function runOptimization(params, net, content_losses, style_losses, temporal_los
     return loss, grad:view(grad:nElement())
   end
 
-  start_time = os.time()
-  
+  start_time = sys.clock()
+
   -- Run optimization.
   if params.optimizer == 'lbfgs' then
     print('Running optimization with L-BFGS')
@@ -125,9 +126,9 @@ function runOptimization(params, net, content_losses, style_losses, temporal_los
     end
   end
   
-  end_time = os.time()
-  elapsed_time = os.difftime(end_time-start_time)
-  print("Running time: " .. elapsed_time .. "s")
+  end_time = sys.clock()
+  elapsed_time = end_time - start_time
+  print(string.format("Running time: %.3fs", elapsed_time))
   
   print_end(num_calls)
   maybe_save(num_calls, true)
